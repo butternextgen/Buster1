@@ -1,1 +1,43 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="multimedia_displaybmp" id="138" x="216" y="112">
+    <field name="BMP"></field>
+    <next>
+      <block type="controls_if" id="115" inline="false">
+        <statement name="DO0">
+          <block type="expansion_gripper" id="150" inline="true"></block>
+        </statement>
+        <next>
+          <block type="movement_forward" id="59">
+            <next>
+              <block type="oled_color" id="94">
+                <field name="OBJECT">BLACK</field>
+                <next>
+                  <block type="movement_reverse" id="69">
+                    <next>
+                      <block type="movement_rightmotor" id="39" inline="true">
+                        <value name="MOVRIGHT">
+                          <block type="sensor_object" id="77">
+                            <field name="OBJECT">RIGHTFRONT</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_leftmotor" id="49" inline="true">
+                            <value name="MOVLEFT">
+                              <block type="sensor_object" id="85">
+                                <field name="OBJECT">LEFTFRONT</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
